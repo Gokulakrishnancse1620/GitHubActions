@@ -1,16 +1,16 @@
-name: 01-hello_world
-on : workflow_dispatch
+name: 01 - Hello World
+
+on: workflow_dispatch   # "Run workflow" button in the Actions tab (manual trigger)
 
 jobs:
-  build: 
-    runs-on:ubuntu-latest
+  say-hello:                     # <- job id (you choose this name)
+    runs-on: ubuntu-latest       # <- GitHub-hosted Linux runner
     steps:
-      -name: printing a greeting
-      run: echo "Hello github actions"
+      - name: Print a greeting
+        run: echo "Hello, GitHub Actions! 👋"
 
-      -name: print multiple lines
-      run:|
-      echo "This run several run commands"
-      echo "Today's runner is :$RUNNER_OS"
-      echo "This repository is :$GITHUB_REPOSITORY"
-      
+      - name: Print multiple lines
+        run: |
+          echo "This step runs several shell commands."
+          echo "Today's runner is: $RUNNER_OS"
+          echo "The repository is: $GITHUB_REPOSITORY"
