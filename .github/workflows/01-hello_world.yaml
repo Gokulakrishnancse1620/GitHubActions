@@ -1,13 +1,10 @@
-name: 01- Hello World
-on : workflow_dispatch
+name : 01-Hello World
+
+on: workflow_dispatch
+
 jobs:
   say-hello:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu_latest
     steps:
-      - name: printing a greeting
-        run: echo "Hello , Github actions"
-      - name: printing multiple lines
-        run : |
-          echo "This steps run several shell commands"
-          echo "Todays' runner is : $RUNNER_OS"
-          echo "This repository is : $GITHUB_REPOSITORY"
+      - name: print a greeting
+        run: echo "Hello, Github Actions!"
