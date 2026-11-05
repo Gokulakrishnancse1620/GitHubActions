@@ -1,12 +1,11 @@
-name: 01-Hello World
+name : 01-Hello World
 
-on:
+on: 
   workflow_dispatch:
 
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Print a greeting
-        run: echo "Hello, GitHub Actions!"
+      - name: print a greeting
+        run: echo "Hello, Github Actions!"
